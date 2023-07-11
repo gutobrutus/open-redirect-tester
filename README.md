@@ -16,7 +16,7 @@ Na figura anterior, como exemplo, a url indica que após logar o usuário dever�
 
 **Etapas do ataque**:
 
-1. O atacante envia um link malicioso com um parâmetro de redirecionamento diferente, enviando os dados para um sistema malicioso;
+1. O atacante envia um link malicioso com um parâmetro de redirecionamento diferente, enviando os dados para um sistema malicioso. Ex.: https/sistema-alvo/next=http://url-maliciosa;
 2. O usuário vítima acessa o link e informa as credenciais de acesso;
 3. As credenciais são enviados para uma app maliciosa que recebe esses dados;
 4. Os dados coletados são salvos e o atacante tem acesso a essa informação.
@@ -56,6 +56,8 @@ A app solicitará 3 argumentos:
 - **HOST**: O host que coletará os dados do usuário, no caso, onde estará executando a app maliciosa.
 - **PORTA**: Em que porta a app maliciosa irá escutar.
 - **URL_REDIRECT**: Para qual URL a app maliciosa redirecionará a vítima, uma url válida do sistema que o usuário está usando.
+
+A app responde no endpoint /redirapp, ou seja, se o HOST for 192.168.56.100 e a PORTA for 5000, o link que será enviado ao usuário deverá ser https/sistema-alvo/next=http://192.168.56.100:5000/redirapp. O ip ai é apenas para exemplificar, troque-o para o seu cenário.
 
 ## Comentários:
 
