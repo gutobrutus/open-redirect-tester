@@ -27,13 +27,13 @@ Na figura anterior, como exemplo, a url indica que após logar o usuário dever�
 1. Efetue o clone da app em um computador com S.O. Linux, que será o servidor que executara a app maliciosa:
 
 ```shell
-git clone url
+git clone https://github.com/gutobrutus/open-redirect-tester.git
 ```
 
 2. Acesse o diretório da app:
 
 ```shell
-cd dir
+cd open-redirect-tester
 ```
 
 3. Inicie um virtual env do python:
